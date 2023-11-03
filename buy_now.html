@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        div{
+            text-align: center;
+            background-color: rgb(55, 55, 48);
+        }
+        ul,li{
+            border: 1px solid white;
+            list-style-type: none;
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">buy now</h1>
+    <div>
+     <ul id="ul">
+
+
+     </ul>
+
+
+    </div>
+
+
+    <script>
+       let ul=document.getElementById("ul")
+
+       let a=JSON.parse(localStorage.getItem("buy"))// to getting the object using local storage by using "buy" key 
+       let li=document.createElement("li")
+       let im=document.createElement("img")
+       im.style.width="200px"
+       im.setAttribute("src",a.thumbnail)
+       li.appendChild(im)
+       ul.appendChild(li)
+       let li1=document.createElement("li")
+       li1.innerText=a["title"]
+       ul.appendChild(li1)
+       let li2=document.createElement("li")
+       li2.innerText="Price "+a["price"]
+       ul.appendChild(li2)
+       let li5=document.createElement("li")
+       li5.innerText=a.discountPercentage
+       ul.appendChild(li5)
+       let li3=document.createElement("li")
+       li3.innerText=a.description
+       ul.appendChild(li3)
+       let li4=document.createElement("li")
+       li4.innerText="stock="+a.stock
+       ul.appendChild(li4)
+       
+
+       let bt=document.createElement("button")
+       bt.innerText="Buy Now"
+       bt.style.marginLeft="50%";
+
+       document.body.append(bt)
+
+
+    </script>
+    
+</body>
+</html>
