@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+        }
+        div{
+
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            color: aqua;
+            /* background-color:rgb(255, 255, 255); */
+            text-align: center;
+            margin-top: 10%;
+            margin-left: 45%;
+        }
+        button{
+            background-color: green;
+            border-color:green;
+            color: white;
+            width: 150px;
+            height: 50px;
+            margin-left: 47%;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://cdn.dribbble.com/users/1238709/screenshots/4069900/success_celebration_800x600.gif" alt="" style="width: 200px;height: 200px; border-radius:100%;">
+        <h2>Congratulations <br> Your Order Placed</h2>
+
+
+    </div>
+    <button>
+        Done
+    </button>
+    <script>
+        let btn=document.getElementsByTagName("button")
+        btn[0].addEventListener("click",()=>{
+            window.location.assign("./homepage.html")
+        })
+
+
+    </script>
+</body>
+</html>

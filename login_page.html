@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+         body{
+            background-image: linear-gradient(to right,rgb(159, 81, 232)  , blue );
+        }
+        div{
+            border: 1px solid blueviolet;
+            width: 300px;
+            height: 450px;
+            margin-left: 40%;
+            margin-top: 10%;
+            background-color: white;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        div:hover{
+            box-shadow: 0px 0px 6px 3px white;
+            transition: 1s;
+        }
+        div form{
+            margin-left: 15%;
+        }
+         input{
+            margin-bottom: 10px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        input:hover{
+            border: none;
+            outline:1px solid blue;
+            box-shadow:0px 0px 4px 1px rgb(121, 121, 223) ;
+        }
+        #log{
+            margin-top: 10px;
+            width: 80%;
+            background-color: rgb(90, 90, 237);
+            color: white;
+        }
+        #for{
+            margin-top: 5px;
+            width: 80%;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3 style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+            <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+          </svg><b><u>Online Mart </u></b><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+            <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg></h3>
+    <h1 style="margin-left: 35%;">login</h1>
+    <form action="">
+        <label for="uname">UserName:</label><br>
+        <input type="text" name="uname" id="uname" size="25" minlength="6" maxlength="16" placeholder="Username"><br>
+        <label for="pass">PassWord</label><br>
+        <input type="password" name="pass" id="pass" size="25"><br>
+        <i style="color:red;visibility: hidden;" id="it">! password not match</i><br>
+        <label for="repass">Re-PassWord</label><br>
+        <input type="password" name="repass" id="repass" size="25"><br>
+        <input type="submit" value="login" id="log"><br>
+        <input type="button" value="Forgot Password" id="for">
+
+    </form>
+    </div>
+<!-- --------------------------------------------------- -->
+    <script>
+        let f=document.forms;
+
+        f[0].addEventListener("submit",(e)=>{
+            e.preventDefault()
+            // let a=[];
+           
+            let username=e.target[0].value
+            let password=e.target[1].value
+            let repassword=e.target[2].value
+
+             
+
+             
+            let d=JSON.parse(localStorage.getItem("data"))
+            console.log(d)
+
+            let fine=d.find((v)=>{
+                console.log(v)
+                return v.username==username && v.password==password
+            })
+            if(password!=repassword){
+                let it=document.getElementById("it")
+                it.style.visibility="visible"
+              
+            }else if(fine){
+                alert("login Success full!")
+                window.location.assign("./homepage.html")
+            }else{
+                alert("please enter valid details")
+            }
+
+        
+
+
+
+
+
+
+
+
+
+
+        //     if(user=="" || pass=="" || repass==""){
+        //         alert("username or password incorrect")
+        //     }else{
+        //     a.push({username:user,password:pass,repassword:repass})
+        //     }
+        //  let b=JSON.parse(localStorage.getItem("data"))
+        // b.map((v,i,ar)=>{
+        //     if(v.username==a[0].username && v.password==a[0].password && v.repassword==a[0].repassword){
+        //         alert("login Success full!")
+        //         
+        //     }else{
+        //         alert("Please enter valid credentials")
+
+        //     }
+        // })
+       e.target[0].value=""
+       e.target[1].value=""
+       e.target[2].value=""
+
+        })
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

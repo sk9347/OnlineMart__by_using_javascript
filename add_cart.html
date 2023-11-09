@@ -6,20 +6,36 @@
     <title>Document</title>
     <style>
         body{
-            background-color: black;
+             background-image: linear-gradient(to right,rgb(159, 81, 232)  , blue);
             color: white;
         }
         .bt{
+            margin-left: 10%;
             width: 100px;
             height: 50px;
             border-radius: 10px;
         }
+        table,tr{
+            border: 1px solid white;
+        }
+        button{
+            margin-left: 5px;
+            margin-right: 5px;
+            height: 50px;
+        }
+        div{
+            margin-left: 10%;
+            justify-content: center;
         
+        }
+        
+       
+           
     </style>
 </head>
 <body>
-    <h1>cart</h1>
-    <button class="bt">cart</button>
+    <h1 style="text-align: center;">Cart</h1>
+    <button class="bt">Cart</button>
     <div id="div">
 
     </div>
@@ -35,20 +51,22 @@
 
 
         let a=JSON.parse(localStorage.getItem("add"))
+
+       
         // a==null?a=[]:a;
 
 
         console.log(a);
         a.filter((v,i,ar)=>{
             let trc=document.createElement("tr")
-            let tdc=document.createElement("td")
-            tdc.innerText=v.id
-            trc.appendChild(tdc)
+            // let tdc=document.createElement("td")
+            // tdc.innerText=v.id
+            // trc.appendChild(tdc)
             let td1=document.createElement("td")
             let im=document.createElement("img")
             im.setAttribute("src",v.thumbnail)
-            im.style.width="200px"
-            im.style.height="200px"
+            im.style.width="300px"
+            im.style.height="300px"
             td1.appendChild(im)
             trc.appendChild(td1)
             let td2=document.createElement("td")
@@ -57,18 +75,33 @@
             let td3=document.createElement("td")
             let bt=document.createElement("button")
             bt.innerText="remove item"
+            bt.style.backgroundColor="red"
+            bt.style.color="white"
+            bt.style.borderRadius="5px"
             td3.appendChild(bt)
+            let btt=document.createElement("button")
+            btt.innerText="Buy now"
+            btt.style.backgroundColor="blue"
+            btt.style.color="white"
+            btt.style.borderRadius="5px"
+
+
+            td3.appendChild(btt)
+            
             trc.appendChild(td3)
             tbc.appendChild(trc)
             
 
             bt.addEventListener("click",()=>{
-                localStorage.clear("add")
+                // localStorage.clear("add")
+              trc.style.display="none"
+            
+            })
+            btt.addEventListener("click",()=>{
+                localStorage.setItem("buy",JSON.stringify(a[i]))
+                window.location.assign("./buy_now.html")
             })
 
-
-           
-        
         })
         let btn=document.getElementsByTagName("button")
         btn[0].innerText="Cart "+a.length;

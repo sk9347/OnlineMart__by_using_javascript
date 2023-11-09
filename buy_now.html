@@ -6,64 +6,90 @@
     <title>Document</title>
     <style>
         body{
-            background-color: black;
+            background-image: linear-gradient(to right,rgb(159, 81, 232), blue);
             color: white;
         }
         div{
+          border-radius: 10px;
             text-align: center;
-            background-color: rgb(55, 55, 48);
+            background-color: rgb(254, 254, 254);
+            color: black;
         }
-        ul,li{
-            border: 1px solid white;
-            list-style-type: none;
-
-        }
+        
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">buy now</h1>
+    <h1 style="text-align: center;">Buy Now</h1>
+    <div class="card mb-3" style="max-width: 540px;margin-left:30%; border-radius: 20px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <h5 class="price"></h5>
+              <h5 class="dis"></h5>
+              <p class="card-text"></p>
+              <p class="rat"></p>
+            </div>
+          </div>
+        </div>
+      </div>
     <div>
-     <ul id="ul">
-
-
-     </ul>
-
 
     </div>
+    
 
 
     <script>
-       let ul=document.getElementById("ul")
 
        let a=JSON.parse(localStorage.getItem("buy"))// to getting the object using local storage by using "buy" key 
-       let li=document.createElement("li")
-       let im=document.createElement("img")
-       im.style.width="200px"
-       im.setAttribute("src",a.thumbnail)
-       li.appendChild(im)
-       ul.appendChild(li)
-       let li1=document.createElement("li")
-       li1.innerText=a["title"]
-       ul.appendChild(li1)
-       let li2=document.createElement("li")
-       li2.innerText="Price "+a["price"]
-       ul.appendChild(li2)
-       let li5=document.createElement("li")
-       li5.innerText=a.discountPercentage
-       ul.appendChild(li5)
-       let li3=document.createElement("li")
-       li3.innerText=a.description
-       ul.appendChild(li3)
-       let li4=document.createElement("li")
-       li4.innerText="stock="+a.stock
-       ul.appendChild(li4)
-       
+    
+      
+       let img=document.getElementsByTagName("img")
+       img[0].setAttribute("src",a.thumbnail)
+       img[0].style.marginTop="10px"
+       let tit=document.getElementsByClassName("card-title")
+       tit[0].innerText=a.title
+       let price=document.getElementsByClassName("price")
+       price[0].innerText="Price "+ 83*a["price"]
+       let disc=document.getElementsByClassName("dis")
+       disc[0].innerText="discount "+a.discountPercentage
+       let para=document.getElementsByClassName("card-text")
+       para[0].innerText=a.description
+       let rat=document.getElementsByClassName("rat")
+        rat[0].innerText="rating"+a.rating
 
        let bt=document.createElement("button")
-       bt.innerText="Buy Now"
-       bt.style.marginLeft="50%";
-
+       bt.innerText="Order Now"
+       bt.style.marginLeft="45%";
+       bt.style.backgroundColor="blue"
+       bt.style.color="white"
+       bt.style.width="100px"
+       bt.style.height="40px"
+       bt.style.borderRadius="10px"
        document.body.append(bt)
+
+       bt.addEventListener("click",()=>{
+           window.location.assign("./order_placed.html")
+       })
+       
+       
+       let btn=document.createElement("button")
+       btn.innerText="back"
+       btn.style.marginLeft="45%";
+       btn.style.backgroundColor="white"
+       btn.style.color="black"
+       btn.style.width="100px"
+       btn.style.height="40px"
+       btn.style.borderRadius="10px"
+       
+       document.body.append(btn)
+
+       btn.addEventListener("click",()=>{
+        history.back()
+       })
 
 
     </script>
