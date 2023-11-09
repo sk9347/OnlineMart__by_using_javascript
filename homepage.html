@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        body{
+           /* background-image: linear-gradient(to right,rgb(127, 21, 227),rgb(38, 38, 240)); */
+           background-color: azure;
+        }
+        ul{
+            list-style-type: none;
+            /* border: 1px solid black; */
+        }
+        #div{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 10px;
+            text-align: center;
+        }
+        .btn{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-bottom: 20px;
+            
+           
+        }
+        .btn > div{
+            width: 100%;
+            height: 200px;
+        }
+
+        button{
+
+            /* background-color: blue;
+            color: white; */
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            margin-top: 10px;
+
+        }
+        ul{
+            /* border: 1px solid rgb(134, 120, 120); */
+            border-radius: 10px;
+            box-shadow: 0px 1px 6px 3px palevioletred;
+        }
+        ul:hover{
+            
+            margin-left: 2px;
+            background-color: black;
+            color: white;
+            box-shadow: 0px 0px 5px 3px;
+            transition:0.5s;
+        }
+        header{
+            display: flex;
+            width: 100%;
+            height: 70px;
+            text-align: center;
+            color: white;
+            position: absolute;
+            top: 2%;
+            margin-left: 2%;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        footer{
+            width: 100%;
+            height: 300px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: black;
+            color: white;
+            display: flex;
+        }
+        #head{
+            background-image: url('https://i0.wp.com/segwitz.com/wp-content/uploads/2021/09/why-ecommerce-need-mobile-apps.jpg?w=1200&ssl=1');
+            width: 100%;
+            height: 750px;
+            color: white;
+            margin-bottom: 5%;
+        }
+        a{
+           color: white;
+           text-decoration: none;
+           
+        }
+        a:hover{
+            color: blue;
+        }
+        ol,li{
+            list-style: none;
+            margin-bottom: 3%;
+            
+        }
+        div>span{
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="head">
+     <h1 style="color: white;position: relative;top: 30%;margin-left: 10%;font-weight: 900;font-style:italic;">The Best Way to  <br> Shoping...</h1>
+    <a href="#butt"><p style="position: relative;top: 35%;margin-left: 20%;border: 2px solid white;width: 100px;padding: 10px;">Shop Now</p></a>
+    </div>
+    <header>
+        <div>
+          <h1 style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+            <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zM4 15h3v-5H4v5zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3zm3 0h-2v3h2v-3z"/>
+          </svg><b><u>Online Mart </u></b><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+            <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg></h1>
+        </div>
+    </header>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/Phase3/J23_P3B_PC_NTA_Hero_2x_V3._CB573693536_.jpg" class="d-block w-100" style="height: 400px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/Jupiter/GW/P3/updated/Deals-on-makeup-PCyu._CB573741808_.jpg" class="d-block w-100"  style="height:400px" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images-eu.ssl-images-amazon.com/images/G/31/2023/Auto/Jupiter/GW_Phase3/3000x1200_22June._CB573736428_.jpg" class="d-block w-100" style="height: 400px;" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <button style="width: 100px;">all</button>
+    <div id="butt">
+    <div class="btn">
+   
+    <div><button><img src="https://i.gadgets360cdn.com/large/WL-1200x800_1696936725053.jpg" alt="smartphones" width="100%" height="100%"></button></div>
+    <div><button><img src="https://s3b.cashify.in/gpro/uploads/2022/07/13130026/Laptops-Deals-You-Must-Look-For-In-Amazon-Prime-Day-Sale.jpg" alt="laptops" width="100%" height="100%"></button></div>
+    <div><button><img src="https://nypost.com/wp-content/uploads/sites/2/2021/10/amazon-fragrance-sale.jpg?resize=878,585&quality=75&strip=all" alt="fragrances" width="100%" height="100%"></button></div>
+    <div><button><img src="https://images-eu.ssl-images-amazon.com/images/G/31/ibpp/KoreanStore20/KoreanBeautybrands/Pilgrim_Banner_new.jpg" alt="skincare" width="100%" height="100%"></button></div>
+    <div><button><img src="https://cdn.grabon.in/gograbon/images/merchant/1572609154076.png" alt="groceries" width="100%" height="100%"></button></div>
+    <div><button><img src="https://images-eu.ssl-images-amazon.com/images/G/31/IMG20/Home/2023/Jupiter/SubcatHeaders/P3_Home_Decor_unrec_mbl.jpg" alt="home Decoration" width="100%" height="100%" ></button></div>
+    <div id="nav">
+        <button  style="width: 100px;height: 50px;position: absolute; top: 0%;right: 16%;background-color: black;color: white;opacity: 0.7;">Cart</button>
+        <button  style="width: 100px;height: 50px;position: absolute; top: 0%;right: 8%;background-color: black;color: white;opacity: 0.7;">logout</button>
+        <button  style="width: 100px;height: 50px;position: absolute; top: 0%;right: 0%;background-color:black;color: white;opacity: 0.7;">Sign In</button>
+        <button  style="width: 100px;height: 50px;position: absolute; top: 0%;right: 25%;background-color:black;color: white;opacity: 0.7;">Home</button>
+        </div>
+   
+    </div>
+</div>
+    
+    <div id="div">
+       
+    </div>
+    <footer>
+       <div style="margin-left:10n %;">
+        <h2>contact Us</h2>
+        <ol>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Blog</li></a>
+            <a href=""><li>Support Policy</li></a>
+            <a href=""><li>Privacy policy</li></a>
+            <a href=""><li>Terms and Conditionals</li></a>
+        </ol>
+       </div>
+       <div style="margin-left:10%;">
+        <h2>Help and Support</h2>
+        <a href=""><li>Login</li></a>
+        <a href=""><li>FQA</li></a>
+        <a href=""><li>Downloads</li></a>
+        <a href=""><li>Support</li></a>
+       </div>
+
+       <div style="display: inline-block;position: relative;top: 20%;margin-left:10% ;">
+        <span>
+        <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+          </svg></a></span>
+          <span>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg></a>
+          </span>
+          <span>
+            <a href=""> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg></a>
+          </span>
+          <span>
+            <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+              </svg></a>
+        </span>
+
+       </div>
+
+    </footer>
+    <script>
+    let a=[
+        {
+        "id":1,
+        "title":"iPhone 9",
+        "description":"An apple mobile which is nothing like apple",
+        "price":549,
+        "discountPercentage":12.96,
+        "rating":4.69,
+        "stock":94,
+        "brand":"Apple",
+        "category":"smartphones",
+        "thumbnail":"https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+        },
+        {
+        "id":2,
+        "title":"iPhone X",
+        "description":"SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price":899,
+        "discountPercentage":17.94,
+        "rating":4.44,
+        "stock":34,
+        "brand":"Apple",
+        "category":"smartphones",
+        "thumbnail":"https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        },
+        {
+        "id":3,
+        "title":"Samsung Universe 9",
+        "description":"Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price":1249,
+        "discountPercentage":15.46,
+        "rating":4.09,
+        "stock":36,
+        "brand":"Samsung",
+        "category":"smartphones",
+        "thumbnail":"https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/3/1.jpg"
+        ]
+        },
+        {
+        "id":4,
+        "title":"OPPOF19",
+        "description":"OPPO F19 is officially announced on April 2021.",
+        "price":280,
+        "discountPercentage":17.91,
+        "rating":4.3,
+        "stock":123,
+        "brand":"OPPO",
+        "category":"smartphones",
+        "thumbnail":"https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/4/1.jpg",
+        "https://i.dummyjson.com/data/products/4/2.jpg",
+        "https://i.dummyjson.com/data/products/4/3.jpg",
+        "https://i.dummyjson.com/data/products/4/4.jpg",
+        "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":5,
+        "title":"Huawei P30",
+        "description":"Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+        "price":499,
+        "discountPercentage":10.58,
+        "rating":4.09,
+        "stock":32,
+        "brand":"Huawei",
+        "category":"smartphones",
+        "thumbnail":"https://i.dummyjson.com/data/products/5/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/5/1.jpg",
+        "https://i.dummyjson.com/data/products/5/2.jpg",
+        "https://i.dummyjson.com/data/products/5/3.jpg"
+        ]
+        },
+        {
+        "id":6,
+        "title":"MacBook Pro",
+        "description":"MacBook Pro 2021 with mini-LED display may launch between September, November",
+        "price":1749,
+        "discountPercentage":11.02,
+        "rating":4.57,
+        "stock":83,
+        "brand":"Apple",
+        "category":"laptops",
+        "thumbnail":"https://i.dummyjson.com/data/products/6/thumbnail.png",
+        "images":[
+        "https://i.dummyjson.com/data/products/6/1.png",
+        "https://i.dummyjson.com/data/products/6/2.jpg",
+        "https://i.dummyjson.com/data/products/6/3.png",
+        "https://i.dummyjson.com/data/products/6/4.jpg"
+        ]
+        },
+        {
+        "id":7,
+        "title":"Samsung Galaxy Book",
+        "description":"Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
+        "price":1499,
+        "discountPercentage":4.15,
+        "rating":4.25,
+        "stock":50,
+        "brand":"Samsung",
+        "category":"laptops",
+        "thumbnail":"https://i.dummyjson.com/data/products/7/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/7/1.jpg",
+        "https://i.dummyjson.com/data/products/7/2.jpg",
+        "https://i.dummyjson.com/data/products/7/3.jpg",
+        "https://i.dummyjson.com/data/products/7/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":8,
+        "title":"Microsoft Surface Laptop 4",
+        "description":"Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
+        "price":1499,
+        "discountPercentage":10.23,
+        "rating":4.43,
+        "stock":68,
+        "brand":"Microsoft Surface",
+        "category":"laptops",
+        "thumbnail":"https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/8/1.jpg",
+        "https://i.dummyjson.com/data/products/8/2.jpg",
+        "https://i.dummyjson.com/data/products/8/3.jpg",
+        "https://i.dummyjson.com/data/products/8/4.jpg",
+        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":9,
+        "title":"Infinix INBOOK",
+        "description":"Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
+        "price":1099,
+        "discountPercentage":11.83,
+        "rating":4.54,
+        "stock":96,
+        "brand":"Infinix",
+        "category":"laptops",
+        "thumbnail":"https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/9/1.jpg",
+        "https://i.dummyjson.com/data/products/9/2.png",
+        "https://i.dummyjson.com/data/products/9/3.png",
+        "https://i.dummyjson.com/data/products/9/4.jpg",
+        "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":10,
+        "title":"HP Pavilion 15-DK1056WM",
+        "description":"HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
+        "price":1099,
+        "discountPercentage":6.18,
+        "rating":4.43,
+        "stock":89,
+        "brand":"HP Pavilion",
+        "category":"laptops",
+        "thumbnail":"https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+        "images":[
+        "https://i.dummyjson.com/data/products/10/1.jpg",
+        "https://i.dummyjson.com/data/products/10/2.jpg",
+        "https://i.dummyjson.com/data/products/10/3.jpg",
+        "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+        ]
+        },
+        {
+        "id":11,
+        "title":"perfume Oil",
+        "description":"Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
+        "price":13,
+        "discountPercentage":8.4,
+        "rating":4.26,
+        "stock":65,
+        "brand":"Impression of Acqua Di Gio",
+        "category":"fragrances",
+        "thumbnail":"https://i.dummyjson.com/data/products/11/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/11/1.jpg",
+        "https://i.dummyjson.com/data/products/11/2.jpg",
+        "https://i.dummyjson.com/data/products/11/3.jpg",
+        "https://i.dummyjson.com/data/products/11/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":12,
+        "title":"Brown Perfume",
+        "description":"Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
+        "price":40,
+        "discountPercentage":15.66,
+        "rating":4,
+        "stock":52,
+        "brand":"Royal_Mirage",
+        "category":"fragrances",
+        "thumbnail":"https://i.dummyjson.com/data/products/12/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/12/1.jpg",
+        "https://i.dummyjson.com/data/products/12/2.jpg",
+        "https://i.dummyjson.com/data/products/12/3.png",
+        "https://i.dummyjson.com/data/products/12/4.jpg",
+        "https://i.dummyjson.com/data/products/12/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":13,
+        "title":"Fog Scent Xpressio Perfume",
+        "description":"Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
+        "price":13,
+        "discountPercentage":8.14,
+        "rating":4.59,
+        "stock":61,
+        "brand":"Fog Scent Xpressio",
+        "category":"fragrances",
+        "thumbnail":"https://i.dummyjson.com/data/products/13/thumbnail.webp",
+        "images":[
+        "https://i.dummyjson.com/data/products/13/1.jpg",
+        "https://i.dummyjson.com/data/products/13/2.png",
+        "https://i.dummyjson.com/data/products/13/3.jpg",
+        "https://i.dummyjson.com/data/products/13/4.jpg",
+        "https://i.dummyjson.com/data/products/13/thumbnail.webp"
+        ]
+        },
+        {
+        "id":14,
+        "title":"Non-Alcoholic Concentrated Perfume Oil",
+        "description":"Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
+        "price":120,
+        "discountPercentage":15.6,
+        "rating":4.21,
+        "stock":114,
+        "brand":"Al Munakh",
+        "category":"fragrances",
+        "thumbnail":"https://i.dummyjson.com/data/products/14/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/14/1.jpg",
+        "https://i.dummyjson.com/data/products/14/2.jpg",
+        "https://i.dummyjson.com/data/products/14/3.jpg",
+        "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":15,
+        "title":"Eau De Perfume Spray",
+        "description":"Genuine Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
+        "price":30,
+        "discountPercentage":10.99,
+        "rating":4.7,
+        "stock":105,
+        "brand":"Lord - Al-Rehab",
+        "category":"fragrances",
+        "thumbnail":"https://i.dummyjson.com/data/products/15/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/15/1.jpg",
+        "https://i.dummyjson.com/data/products/15/2.jpg",
+        "https://i.dummyjson.com/data/products/15/3.jpg",
+        "https://i.dummyjson.com/data/products/15/4.jpg",
+        "https://i.dummyjson.com/data/products/15/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":16,
+        "title":"Hyaluronic Acid Serum",
+        "description":"L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+        "price":19,
+        "discountPercentage":13.31,
+        "rating":4.83,
+        "stock":110,
+        "brand":"L'Oreal Paris",
+        "category":"skincare",
+        "thumbnail":"https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/16/1.png",
+        "https://i.dummyjson.com/data/products/16/2.webp",
+        "https://i.dummyjson.com/data/products/16/3.jpg",
+        "https://i.dummyjson.com/data/products/16/4.jpg",
+        "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":17,
+        "title":"Tree Oil 30ml",
+        "description":"Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+        "price":12,
+        "discountPercentage":4.09,
+        "rating":4.52,
+        "stock":78,
+        "brand":"Hemani Tea",
+        "category":"skincare",
+        "thumbnail":"https://i.dummyjson.com/data/products/17/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/17/1.jpg",
+        "https://i.dummyjson.com/data/products/17/2.jpg",
+        "https://i.dummyjson.com/data/products/17/3.jpg",
+        "https://i.dummyjson.com/data/products/17/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":18,
+        "title":"Oil Free Moisturizer 100ml",
+        "description":"Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+        "price":40,
+        "discountPercentage":13.1,
+        "rating":4.56,
+        "stock":88,
+        "brand":"Dermive",
+        "category":"skincare",
+        "thumbnail":"https://i.dummyjson.com/data/products/18/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/18/1.jpg",
+        "https://i.dummyjson.com/data/products/18/2.jpg",
+        "https://i.dummyjson.com/data/products/18/3.jpg",
+        "https://i.dummyjson.com/data/products/18/4.jpg",
+        "https://i.dummyjson.com/data/products/18/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":19,
+        "title":"Skin Beauty Serum.",
+        "description":"Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
+        "price":46,
+        "discountPercentage":10.68,
+        "rating":4.42,
+        "stock":54,
+        "brand":"ROREC White Rice",
+        "category":"skincare",
+        "thumbnail":"https://i.dummyjson.com/data/products/19/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/19/1.jpg",
+        "https://i.dummyjson.com/data/products/19/2.jpg",
+        "https://i.dummyjson.com/data/products/19/3.png",
+        "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":20,
+        "title":"Freckle Treatment Cream- 15gm",
+        "description":"Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
+        "price":70,
+        "discountPercentage":16.99,
+        "rating":4.06,
+        "stock":140,
+        "brand":"Fair & Clear",
+        "category":"skincare",
+        "thumbnail":"https://i.dummyjson.com/data/products/20/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/20/1.jpg",
+        "https://i.dummyjson.com/data/products/20/2.jpg",
+        "https://i.dummyjson.com/data/products/20/3.jpg",
+        "https://i.dummyjson.com/data/products/20/4.jpg",
+        "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":21,
+        "title":"- Daal Masoor 500 grams",
+        "description":"Fine quality Branded Product Keep in a cool and dry place",
+        "price":20,
+        "discountPercentage":4.81,
+        "rating":4.44,
+        "stock":133,
+        "brand":"Saaf & Khaas",
+        "category":"groceries",
+        "thumbnail":"https://i.dummyjson.com/data/products/21/thumbnail.png",
+        "images":[
+        "https://i.dummyjson.com/data/products/21/1.png",
+        "https://i.dummyjson.com/data/products/21/2.jpg",
+        "https://i.dummyjson.com/data/products/21/3.jpg"
+        ]
+        },
+        {
+        "id":22,
+        "title":"Elbow Macaroni - 400 gm",
+        "description":"Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
+        "price":14,
+        "discountPercentage":15.58,
+        "rating":4.57,
+        "stock":146,
+        "brand":"Bake Parlor Big",
+        "category":"groceries",
+        "thumbnail":"https://i.dummyjson.com/data/products/22/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/22/1.jpg",
+        "https://i.dummyjson.com/data/products/22/2.jpg",
+        "https://i.dummyjson.com/data/products/22/3.jpg"
+        ]
+        },
+        {
+        "id":23,
+        "title":"Orange Essence Food Flavou",
+        "description":"Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
+        "price":14,
+        "discountPercentage":8.04,
+        "rating":4.85,
+        "stock":26,
+        "brand":"Baking Food Items",
+        "category":"groceries",
+        "thumbnail":"https://i.dummyjson.com/data/products/23/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/23/1.jpg",
+        "https://i.dummyjson.com/data/products/23/2.jpg",
+        "https://i.dummyjson.com/data/products/23/3.jpg",
+        "https://i.dummyjson.com/data/products/23/4.jpg",
+        "https://i.dummyjson.com/data/products/23/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":24,
+        "title":"cereals muesli fruit nuts",
+        "description":"original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+        "price":46,
+        "discountPercentage":16.8,
+        "rating":4.94,
+        "stock":113,
+        "brand":"fauji",
+        "category":"groceries",
+        "thumbnail":"https://i.dummyjson.com/data/products/24/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/24/1.jpg",
+        "https://i.dummyjson.com/data/products/24/2.jpg",
+        "https://i.dummyjson.com/data/products/24/3.jpg",
+        "https://i.dummyjson.com/data/products/24/4.jpg",
+        "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":25,
+        "title":"Gulab Powder 50 Gram",
+        "description":"Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+        "price":70,
+        "discountPercentage":13.58,
+        "rating":4.87,
+        "stock":47,
+        "brand":"Dry Rose",
+        "category":"groceries",
+        "thumbnail":"https://i.dummyjson.com/data/products/25/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/25/1.png",
+        "https://i.dummyjson.com/data/products/25/2.jpg",
+        "https://i.dummyjson.com/data/products/25/3.png",
+        "https://i.dummyjson.com/data/products/25/4.jpg",
+        "https://i.dummyjson.com/data/products/25/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":26,
+        "title":"Plant Hanger For Home",
+        "description":"Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
+        "price":41,
+        "discountPercentage":17.86,
+        "rating":4.08,
+        "stock":131,
+        "brand":"Boho Decor",
+        "category":"home-decoration",
+        "thumbnail":"https://i.dummyjson.com/data/products/26/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/26/1.jpg",
+        "https://i.dummyjson.com/data/products/26/2.jpg",
+        "https://i.dummyjson.com/data/products/26/3.jpg",
+        "https://i.dummyjson.com/data/products/26/4.jpg",
+        "https://i.dummyjson.com/data/products/26/5.jpg",
+        "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":27,
+        "title":"Flying Wooden Bird",
+        "description":"Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
+        "price":51,
+        "discountPercentage":15.58,
+        "rating":4.41,
+        "stock":17,
+        "brand":"Flying Wooden",
+        "category":"home-decoration",
+        "thumbnail":"https://i.dummyjson.com/data/products/27/thumbnail.webp",
+        "images":[
+        "https://i.dummyjson.com/data/products/27/1.jpg",
+        "https://i.dummyjson.com/data/products/27/2.jpg",
+        "https://i.dummyjson.com/data/products/27/3.jpg",
+        "https://i.dummyjson.com/data/products/27/4.jpg",
+        "https://i.dummyjson.com/data/products/27/thumbnail.webp"
+        ]
+        },
+        {
+        "id":28,
+        "title":"3D Embellishment Art Lamp",
+        "description":"3D led lamp sticker Wall sticker 3d wall art light on/off button cell operated (included)",
+        "price":20,
+        "discountPercentage":16.49,
+        "rating":4.82,
+        "stock":54,
+        "brand":"LED Lights",
+        "category":"home-decoration",
+        "thumbnail":"https://i.dummyjson.com/data/products/28/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/28/1.jpg",
+        "https://i.dummyjson.com/data/products/28/2.jpg",
+        "https://i.dummyjson.com/data/products/28/3.png",
+        "https://i.dummyjson.com/data/products/28/4.jpg",
+        "https://i.dummyjson.com/data/products/28/thumbnail.jpg"
+        ]
+        },
+        {
+        "id":29,
+        "title":"Handcraft Chinese style",
+        "description":"Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
+        "price":60,
+        "discountPercentage":15.34,
+        "rating":4.44,
+        "stock":7,
+        "brand":"luxury palace",
+        "category":"home-decoration",
+        "thumbnail":"https://i.dummyjson.com/data/products/29/thumbnail.webp",
+        "images":[
+        "https://i.dummyjson.com/data/products/29/1.jpg",
+        "https://i.dummyjson.com/data/products/29/2.jpg",
+        "https://i.dummyjson.com/data/products/29/3.webp",
+        "https://i.dummyjson.com/data/products/29/4.webp",
+        "https://i.dummyjson.com/data/products/29/thumbnail.webp"
+        ]
+        },
+        {
+        "id":30,
+        "title":"Key Holder",
+        "description":"Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+        "price":30,
+        "discountPercentage":2.92,
+        "rating":4.92,
+        "stock":54,
+        "brand":"Golden",
+        "category":"home-decoration",
+        "thumbnail":"https://i.dummyjson.com/data/products/30/thumbnail.jpg",
+        "images":[
+        "https://i.dummyjson.com/data/products/30/1.jpg",
+        "https://i.dummyjson.com/data/products/30/2.jpg",
+        "https://i.dummyjson.com/data/products/30/3.jpg",
+        "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
+        ]
+        }
+        ] 
+    let un=document.getElementById("div")
+    let bt=document.getElementsByTagName("button")
+    display(a)
+    bt[2].addEventListener("click",()=>{
+       display(a)
+    })
+    
+    bt[3].addEventListener("click",()=>{
+       let smart=a.filter((v,i,ar)=>{
+          return v.category=="smartphones";
+       })
+        console.log(smart);
+        display(smart);
+    })
+    
+    bt[4].addEventListener("click",()=>{
+        let lap=a.filter((v,i,ar)=>{
+            return v["category"]=="laptops";
+        })
+        console.log(lap)
+        display(lap)
+    })
+    bt[5].addEventListener("click",()=>{
+        let frag=a.filter((v,i,ar)=>{
+        return v["category"]=="fragrances";
+        })
+        console.log(frag)
+        display(frag)
+    })
+
+    bt[6].addEventListener("click",()=>{
+        let skin=a.filter((v,i,ar)=>{
+            return v.category =="skincare";
+        })
+        console.log(skin)
+        display(skin)
+    })
+    bt[7].addEventListener("click",()=>{
+        let groce=a.filter((v,i,ar)=>{
+        return v["category"]=="groceries"
+        })
+        console.log(groce)
+        display(groce)
+    })
+    bt[8].addEventListener("click",()=>{
+        let home=a.filter((v,i,ar)=>{
+            return v.category=="home-decoration"
+        })
+        console.log(home)
+        display(home)
+        
+    })
+    let num=JSON.parse(localStorage.getItem("add"))
+    bt[9].innerText="Cart"+num.length
+    bt[9].addEventListener("click",()=>{
+        window.location.assign("./add_cart.html")
+    })
+    bt[10].addEventListener("click",()=>{
+        window.location.assign("./login_page.html")
+    })
+    bt[11].addEventListener("click",()=>{
+        window.location.assign("./register_page.html")
+    })
+
+
+
+
+    //--------------auto all display ----------------
+    
+    function display(d){
+        un.innerText=""
+        d.filter((v,i,ar)=>{
+            let ul=document.createElement("ul")
+            // let li=document.createElement("li")
+            // li.innerText=v.id
+            // ul.appendChild(li)
+            let li0=document.createElement("li")
+            let im=document.createElement("img")
+            im.setAttribute("src",v.thumbnail)
+            im.style.width="200px"
+            im.style.height="150px"
+            li0.appendChild(im)
+            ul.appendChild(li0)
+            let li1=document.createElement("li")
+            li1.innerText=v.title
+            ul.appendChild(li1)
+            let li2=document.createElement("li")
+            li2.innerText="price "+ (83*v.price)
+            ul.appendChild(li2)
+            let li3=document.createElement("li")
+            li3.innerText=v.description
+            ul.appendChild(li3)
+            let btn=document.createElement("button")
+            btn.innerText="add To cart"
+            btn.style.backgroundColor="white"
+            btn.style.color="black"
+            btn.style.width="100px"
+            btn.style.height="50px"
+
+            ul.appendChild(btn)
+            let bt=document.createElement("button")
+            bt.innerText="Buy Now"
+            bt.style.backgroundColor="yellow"
+            bt.style.color="black"
+            bt.style.width="100px"
+            bt.style.height="50px"
+            ul.appendChild(bt)
+            un.appendChild(ul)
+
+
+           
+            bt.addEventListener("click",()=>{
+                 window.location.assign("./buy_now.html")
+
+                localStorage.setItem("buy",JSON.stringify(a[i]))
+            })
+
+
+        //--------------------------storing part-----------
+       
+        
+
+
+        btn.addEventListener("click",()=>{
+           
+
+
+
+            let rev=localStorage.getItem("add") // to get the obj from local storage
+            // console.log(rev)
+
+            let cart=[];        // temp veriable for storing the clicking obj
+            if(rev!=null){       // to check wich value is return if it is null assign emty array to cart[] array 
+                cart=JSON.parse(rev)
+            }else{
+                cart=[];
+            }
+             
+            // let cart=rev!=null?JSON.parse(rev):[];
+
+            cart.push(a[i])
+            
+            // console.log(a[i])
+
+            localStorage.setItem("add",JSON.stringify(cart))
+
+           
+           
+            window.location.assign("./add_cart.html")//used to route another page
+            
+        })
+
+        })
+    }
+
+
+    // let cbtn=document.createElement("button")
+    // cbtn.innerText="clear storage"
+    // document.body.append(cbtn)
+    // cbtn.addEventListener("click",()=>{
+    //     localStorage.clear()
+    // })
+    </script>
+    
+</body>
+</html>
